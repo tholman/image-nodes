@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title> Interactive Nodes </title>
+
+		<!-- CSS -->
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+
+		<!-- JS -->
+		<script type="text/javascript" src="js/libs/dat.gui.min.js"></script>
+		<script type="text/javascript" src="js/libs/animationFrame.js"></script>
+		<script type="text/javascript" src="js/Nodes.js"></script>
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-22825241-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	
+
+		<script>
+			window.onload = function() {
+				Nodes.init();
+				
+				var gui = new dat.GUI();
+
+				gui.add( Nodes, 'baseRadius', 0, 10 ).name( 'Node Size');
+				gui.add( Nodes, 'lineThickness', 0.1, 4) .name( 'Link Thickness' );
+				gui.add( Nodes, 'reactionSensitivity', 0, 4) .name( 'Sensitivity' );
+				gui.add( Nodes, 'drawDistance', 0, 50) .name( 'Link Distance' );
+
+			};
+		</script>
+
+	</head>
+
+	<body>
+ 		<div id='info'>
+			<a href="http://tholman.com/blog/nodes" title="Read more about Nodes"> <b>Interactive Nodes:</b> </a> Another fun yet useless <a href="http://tholman.com" title="See more awesome experiments!"> experiment by Tim Holman </a> : <a href="http://twitter.com/twholman" title="You'll love my tweets, I promise ;)" > @Twholman </a>
+		</div>
+		<canvas id='canvas'></canvas>
+	</body>
+
+</html>
