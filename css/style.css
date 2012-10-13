@@ -4,33 +4,91 @@ body {
 	margin: 0px;
 }
 
-/*Canvas element - initially hidden*/
 canvas {
 	cursor: normal;
 	display: none;
 }
 
-#info {
-	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-   	font-weight: 300;
-	background-color: white;
-	width: 100%;
-	height: 35px;
-	text-align: left;
-	position: fixed;
-	top: 0;
-	left: 0;
-	box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.4);
-	font-size: 14px;
-	line-height: 36px;
-	padding-left: 25px;
+/* ----- INFO & SHARING -----  */
+
+#info-tab * {
+    box-sizing: border-box;   
 }
 
-#info a {
-	color: deeppink;
-	text-decoration: none;
+#info-tab {
+    height: 150px;
+    background-color: #fff;
+    position: fixed;
+    font-family: helvetica;
+    padding-left: 5px;
+    line-height: 36px;
+    width: 630px;
+    box-shadow: 0px 0px 4px 0px #888;
+    margin-top: 15px;
+    font-size: 17px;
+    -webkit-transition: left 400ms;
+    color: #444;
+    left: -598px;
+    z-index: 1000;
 }
 
-#info a:hover {
+#info-tab:hover {
+    left: 0px; 
+}
+
+#info-tab:hover #title {
+	opacity: 0;   
+}
+
+
+#info-tab #title {
+    -webkit-transition: opacity 400ms;
+    -webkit-transform: rotate(90deg);
+    -webkit-transform-origin: 100% 0%;
+    float: right;
+    width: 150px;
+    height: 30px;
+    position: absolute;
+    text-align: center;
+    right: 0px;
+    bottom: -30px;
+}
+
+#info-tab .info {
+    margin-left: 18px;
+    font-size: 14px;
+
+    line-height: 16px;
+    height: 110px;
+    width: 282px;
+    float: left;
+    padding-right: 18px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #111;
+    margin-right: 5px;
+    position: relative;
+}
+
+#info-tab .first {
+    border-right: 1px solid #ddd;   
+}
+
+#info-tab p {
+	position: absolute;
+    bottom: 0px;
+	font-size: 12px;
+	margin: 0px;
+}
+
+#info-tab a {
+	color: #1C86EE;
+}
+
+#info-tab a:hover {
 	color: hotpink;
+}
+
+#info-tab iframe {
+	vertical-align: bottom;
 }
