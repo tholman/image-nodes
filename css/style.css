@@ -12,21 +12,32 @@ canvas {
 /* ----- INFO & SHARING -----  */
 
 #info-tab * {
-    box-sizing: border-box;   
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
 }
 
 #info-tab {
+
+	font-family: Helvetica, Arial, "Lucida Grande";
+
+	-webkit-box-shadow: 0px 0px 4px 0px #888;
+	box-shadow: 0px 0px 4px 0px #888;
+
+    -webkit-transition: left 400ms; 
+       -moz-transition: left 400ms; 
+         -o-transition: left 400ms;
+          -ms-trantion: left 400ms;
+            transition: left 400ms; 
+
+	background-color: #ffffff;
     height: 150px;
-    background-color: #fff;
     position: fixed;
-    font-family: helvetica;
     padding-left: 5px;
     line-height: 36px;
     width: 630px;
-    box-shadow: 0px 0px 4px 0px #888;
     margin-top: 15px;
     font-size: 17px;
-    -webkit-transition: left 400ms;
     color: #444;
     left: -598px;
     z-index: 1000;
@@ -42,9 +53,25 @@ canvas {
 
 
 #info-tab #title {
-    -webkit-transition: opacity 400ms;
-    -webkit-transform: rotate(90deg);
+    -webkit-transition: opacity 400ms; 
+       -moz-transition: opacity 400ms; 
+         -o-transition: opacity 400ms;
+          -ms-trantion: opacity 400ms;
+            transition: opacity 400ms; 
+
+
+    -webkit-transform: rotate( 90deg ); 
+       -moz-transform: rotate( 90deg ); 
+        -ms-transform: rotate( 90deg ); 
+         -o-transform: rotate( 90deg ); 
+            transform: rotate( 90deg );
+
     -webkit-transform-origin: 100% 0%;
+	   -moz-transform-origin: 100% 0%;
+        -ms-transform-origin: 100% 0%;
+	     -o-transform-origin: 100% 0%;
+	        transform-origin: 100% 0%;
+
     float: right;
     width: 150px;
     height: 30px;
