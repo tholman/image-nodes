@@ -11,7 +11,48 @@
 		<script type="text/javascript" src="js/libs/dat.gui.min.js"></script>
 		<script type="text/javascript" src="js/libs/animationFrame.js"></script>
 		<script type="text/javascript" src="js/Nodes.js"></script>
-		<script type="text/javascript">
+	</head>
+
+	<body>
+
+		<!-- Header -->
+		<div id="info-tab"> 
+    		<div class="info first">
+        		<b>Image Nodes</b> is a little HTML5 experiment exploring image data and using mouse avoidance to add playful interactivity.
+        		<p> 
+        			Made by: <a href="http://tholman.com"> Tim Holman </a> - <a href="http://twitter.com/twholman"> @twholman </a>
+     			</p>
+    		</div>
+    		<div class="info">
+        		This has been made using <i> Javascript </i> and the HTML5 <i> canvas </i> element. You can find the source on <a href="http://github.com/tholman/image-nodes">Github</a> or read about it on my <a href="http://tholman.com/blog/interactive-image-nodes/"> blog </a>     
+        		<p>
+            		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tholman.com/experiments/html5/image-nodes" data-text="Nodes - a fun interactive #javascript experiment by @twholman">Tweet</a>
+           			<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ftholman.com%2Fexperiments%2Fhtml5%2Fimage-nodes&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:107px; height:21px; margin-bottom: -1px;" allowTransparency="true"></iframe>
+        		</p>
+   			</div>
+    		<div id="title">Image Nodes</div>
+		</div>
+		<div id="back">
+    		<a href="/experiments"> More experiments </a> <span>&lsaquo;</span>
+		</div>
+		<script type="text/javascript" src="js/header.js"></script>
+
+		<!-- App -->
+		<canvas id='canvas'></canvas>
+		<script>
+			Nodes.init();
+			
+			var gui = new dat.GUI();
+			gui.add( Nodes, 'baseRadius', 0, 10 ).name( 'Node Size');
+			gui.add( Nodes, 'lineThickness', 0.1, 4) .name( 'Link Thickness' );
+			gui.add( Nodes, 'reactionSensitivity', 0, 4) .name( 'Sensitivity' );
+			gui.add( Nodes, 'drawDistance', 0, 50) .name( 'Link Distance' );
+		</script>
+
+
+		<!-- Misc -->
+    	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    	<script type="text/javascript">
 
 		  var _gaq = _gaq || [];
 		  _gaq.push(['_setAccount', 'UA-22825241-1']);
@@ -22,56 +63,7 @@
 		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		  })();
-
 		</script>
-	
-
-		<script>
-			window.onload = function() {
-				Nodes.init();
-				
-				var gui = new dat.GUI();
-
-				gui.add( Nodes, 'baseRadius', 0, 10 ).name( 'Node Size');
-				gui.add( Nodes, 'lineThickness', 0.1, 4) .name( 'Link Thickness' );
-				gui.add( Nodes, 'reactionSensitivity', 0, 4) .name( 'Sensitivity' );
-				gui.add( Nodes, 'drawDistance', 0, 50) .name( 'Link Distance' );
-
-			};
-		</script>
-
-	</head>
-
-	<body>
-
-		<div id="info-tab"> 
-    		
-    		<div class="info first">
-        		<b>Image Nodes</b> is a little HTML5 experiment exploring image data and using mouse avoidance to add playful interactivity.
-        		<p> 
-        			Made by: <a href="http://tholman.com"> Tim Holman </a> - <a href="http://twitter.com/twholman"> @twholman </a>
-     			</p>
-    		</div>
-    
-    		<div class="info">
-        		This has been made using <i> Javascript </i> and the HTML5 <i> canvas </i> element. You can find the source on <a href="http://github.com/tholman/image-nodes">Github</a> or read about it on my <a href="http://tholman.com/blog/interactive-image-nodes/"> blog </a>
-        
-        		<p>
-
-            		<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://tholman.com/experiments/html5/image-nodes" data-text="Nodes - a fun interactive #javascript experiment by @twholman">Tweet</a>
-
-           			<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Ftholman.com%2Fexperiments%2Fhtml5%2Fimage-nodes&amp;send=false&amp;layout=button_count&amp;width=450&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:107px; height:21px; margin-bottom: -1px;" allowTransparency="true"></iframe>
-
-        		</p>
-   			</div>
-    
-    		<div id="title">Image Nodes</div>
-
-    		<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-		</div>
-
-		<canvas id='canvas'></canvas>
 
 	</body>
-
 </html>
