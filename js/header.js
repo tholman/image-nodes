@@ -17,6 +17,8 @@ for (var i = 0; i < headers.length; i++ ) {
     headers[i].addEventListener('mouseover', function() {
     
         if (!headerMouseDown) {
+
+            interval = clearInterval( interval );
             
             var _this = this;
             

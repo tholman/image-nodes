@@ -49,12 +49,14 @@ canvas {
 
 #back span {
     font-size: 50px;
-    line-height: 25px;
+    line-height: 0px;
     color: #444;
     text-decoration: none;
     font-family: Times;
     position: absolute;
     right: 10px;
+    top: 17px;
+    -webkit-margin-before: -3px;
 }
 
 #info-tab * {
