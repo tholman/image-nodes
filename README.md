@@ -2,14 +2,14 @@ Image Nodes
 ===========
 
 
-(Javascript experiment using image data to create a small interactive particle system)[http://tholman.com/image-nodes]
+[Javascript experiment using image data to create a small interactive particle system](http://tholman.com/image-nodes)
 
 
 ###Licence
 
 The MIT License (MIT)
 
-Copyright (c) 2013 ~ Tim Holman ~ http://tholman.com
+Copyright (c) 2013 - Tim Holman - http://tholman.com
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
