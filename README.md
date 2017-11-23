@@ -5,7 +5,7 @@ Image Nodes
 [Javascript experiment using image data to create a small interactive particle system](http://tholman.com/image-nodes)
 
 
-###Licence
+### Licence
 
 The MIT License (MIT)
 
